@@ -1,0 +1,85 @@
+body{
+    margin:0;
+    padding:0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mega-container{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    transition: 500ms ease-in-out ;
+    display: flex;
+   
+}
+.mega-container.active{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    transition: 500ms ease-in-out ;
+}
+.mega-container.active > h1{
+   color:white;
+   transition: 500ms ease-in-out ;
+}
+
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+.toggle-btn{
+    width:180px;
+    height:60px;
+    background: rgb(153, 153, 153);
+    border-radius:40px;
+    padding:6px;
+    transition: 500ms ease-in-out ;
+}
+.toggle-btn > .inner-circle{
+    position:absolute;
+    width:60px;
+    height: 60px;
+    background: #fff;
+    background-image: url('sun.svg');
+    background-repeat: no-repeat;
+    background-position:0px;
+    border-radius: 50%;
+    background-size: 60px;
+    transition: 500ms ease-in-out ;
+    cursor: pointer;
+}
+.toggle-btn.active{
+        background: rgb(36, 211, 255);
+        transition: 500ms ease-in-out ;
+}
+.toggle-btn.active > .inner-circle{
+    margin-left:120px;
+    transition: 500ms ease-in-out ;
+    position:absolute;
+    background-image: url('moon.svg');
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position: 8px;
+}
+
+
+
+   
+   
+
+  
+@keyframes rotatething{
+    0%{
+        transform: rotate(0deg);
+    }50%{
+        transform: rotate(10deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
